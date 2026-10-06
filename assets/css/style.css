@@ -330,6 +330,132 @@ p {
   padding: 20px 0 26px;
 }
 
+
+/* Selected project — homepage */
+
+.selected-project {
+  margin: 8px 0 58px;
+  padding: 38px 0 8px;
+  border-top: 1px solid var(--border);
+}
+
+.selected-project h2 {
+  margin-bottom: 14px;
+  font-size: 1.45rem;
+}
+
+.selected-project-summary {
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 21px;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-link:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+/* SpearDAT evidence */
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 28px 0 4px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.evidence-item {
+  min-width: 0;
+  padding: 18px 18px 17px;
+  border-right: 1px solid var(--border);
+}
+
+.evidence-item:first-child {
+  padding-left: 0;
+}
+
+.evidence-item:last-child {
+  border-right: 0;
+}
+
+.evidence-item strong {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--text);
+  font-size: 1.38rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.evidence-item span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.compact-evidence {
+  max-width: 900px;
+  margin-top: 25px;
+}
+
+/* SpearDAT content */
+
+.project-scope,
+.verification-section,
+.project-basis {
+  max-width: 790px;
+}
+
+.project-figure {
+  max-width: 900px;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.project-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: #ffffff;
+}
+
+.project-figure figcaption {
+  max-width: 820px;
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.validation-figure {
+  margin-top: 28px;
+}
+
+.project-basis {
+  padding: 20px 22px 18px;
+  border-left: 3px solid var(--accent);
+  background: var(--soft);
+}
+
+.project-basis h2 {
+  font-size: 1.06rem;
+}
+
+.project-basis p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 780px) {
   body {
     font-size: 15px;
@@ -383,5 +509,36 @@ p {
 
   .presentation-frame {
     height: 560px;
+  }
+
+  .evidence-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .evidence-item {
+    padding: 15px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .evidence-item:nth-child(2) {
+    border-right: 0;
+  }
+
+  .evidence-item:nth-child(3),
+  .evidence-item:nth-child(4) {
+    border-bottom: 0;
+  }
+
+  .evidence-item:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .selected-project {
+    margin-bottom: 46px;
+    padding-top: 30px;
+  }
+
+  .project-basis {
+    padding: 18px;
   }
 }

@@ -30,31 +30,43 @@
       <p class="eyebrow">Independent Engineering Project</p>
 
       <p class="lede">
-        A modern C++17 and MATLAB framework for missile aerodynamic analysis,
-        based on publicly released Missile DATCOM methods and source material.
+        A modern C++17 and MATLAB framework for preliminary missile aerodynamic
+        analysis, reconstructing and modernising the publicly released Missile
+        DATCOM implementation.
       </p>
 
       <div class="prose">
         <p>
-          SpearDAT reconstructs and modernises the publicly released Missile
-          DATCOM implementation within a structured C++17 software architecture,
-          while incorporating corrections to identified implementation defects
-          and selected methodological issues.
+          SpearDAT brings established Missile DATCOM aerodynamic methods into a
+          structured software architecture while correcting identified
+          implementation defects and selected methodological issues.
         </p>
 
         <p>
-          It provides structured C++ and MATLAB interfaces for defining missile
-          geometry, flight conditions and analysis cases, replacing the legacy
-          card-and-file workflow with automated case preparation and traceable
-          aerodynamic results suitable for preliminary design and simulation
-          workflows.
+          It replaces the legacy card-and-file workflow with structured C++ and
+          MATLAB interfaces, validated case preparation, isolated solver
+          execution and traceable aerodynamic results suitable for preliminary
+          design and simulation workflows.
         </p>
+      </div>
 
-        <p>
-          The implementation is supported by comprehensive software verification
-          and aerodynamic validation against publicly available NASA wind-tunnel
-          datasets.
-        </p>
+      <div class="evidence-grid" aria-label="SpearDAT project evidence">
+        <div class="evidence-item">
+          <strong>376</strong>
+          <span>solver routines</span>
+        </div>
+        <div class="evidence-item">
+          <strong>477</strong>
+          <span>automated tests</span>
+        </div>
+        <div class="evidence-item">
+          <strong>4</strong>
+          <span>independent NASA wind-tunnel datasets</span>
+        </div>
+        <div class="evidence-item">
+          <strong>376-page</strong>
+          <span>MATLAB Interface User Guide</span>
+        </div>
       </div>
 
       <div class="action-row">
@@ -76,6 +88,76 @@
       </div>
     </section>
 
+    <section class="content-section project-scope">
+      <h2>Project scope</h2>
+      <p>
+        I developed SpearDAT independently, covering the C++17 solver
+        reconstruction and software architecture, structured C++ and MATLAB
+        interfaces, investigation and correction of legacy implementation
+        behaviour, automated verification and regression testing, NASA
+        experimental validation studies, and technical documentation.
+      </p>
+    </section>
+
+    <figure class="project-figure content-section">
+      <img
+        src="../assets/images/speardat-architecture.png"
+        alt="SpearDAT architecture showing the transition from legacy implicit state and file units to structured C++17 modules, explicit state and interfaces."
+      >
+      <figcaption>
+        <strong>Legacy-to-modern reconstruction.</strong>
+        Implicit shared state and file-based execution are reorganised into
+        explicit C++17 modules, structured state and defined interfaces.
+      </figcaption>
+    </figure>
+
+    <section class="content-section verification-section">
+      <h2>Verification &amp; Validation</h2>
+
+      <p>
+        Software verification and aerodynamic validation are treated as separate
+        engineering questions.
+      </p>
+
+      <p>
+        The current baseline includes 477 automated tests covering routine-level
+        behaviour, solver paths, generated input decks, integration behaviour
+        and corrected defects. Aerodynamic predictions have also been assessed
+        independently against four publicly available NASA wind-tunnel datasets
+        spanning forces, moments, control response, roll behaviour and
+        configuration effects.
+      </p>
+
+      <p>
+        Passing software tests establishes implementation behaviour; it does not
+        by itself establish aerodynamic accuracy. Both questions are therefore
+        assessed separately.
+      </p>
+    </section>
+
+    <figure class="project-figure validation-figure">
+      <img
+        src="../assets/images/speardat-validation-nasa2005.png"
+        alt="NASA 2005 longitudinal aerodynamic validation comparing SpearDAT predictions with wind-tunnel measurements across multiple Mach conditions."
+      >
+      <figcaption>
+        <strong>Example aerodynamic validation.</strong>
+        SpearDAT predictions (solid lines) compared with NASA wind-tunnel
+        measurements (filled markers) across multiple Mach conditions.
+      </figcaption>
+    </figure>
+
+    <aside class="project-basis content-section">
+      <h2>Project basis</h2>
+      <p>
+        SpearDAT is an independent personal engineering project developed
+        exclusively from publicly released Missile DATCOM source material,
+        technical literature and public experimental datasets. It is not
+        affiliated with or derived from any employer programme or proprietary
+        information.
+      </p>
+    </aside>
+
     <section class="content-section">
       <h2>Technical Presentation</h2>
       <p class="section-intro">
@@ -94,9 +176,9 @@
     <section class="content-section documentation">
       <h2>Documentation</h2>
       <p>
-        The SpearDAT MATLAB Interface User Guide provides the detailed reference
-        for installation, configuration, engineering inputs, analysis workflows,
-        result interpretation and validation.
+        The 376-page SpearDAT MATLAB Interface User Guide provides the detailed
+        reference for installation, configuration, engineering inputs, analysis
+        workflows, result interpretation and validation.
       </p>
 
       <a
